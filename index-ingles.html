@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!--Diseño del encabezado-->
+    <header class="encabezado">
+        <a href="#" class="logo">portfolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#sobre">About me</a>
+            <a href="#servicios">My services</a>
+            <a href="#portafolio">Testimonials</a>
+            <a href="#contacto">Contact</a>
+            <select id="miSelect" onchange="redireccionar()" class="rectangle-3">
+              <option value="all">Translater</option>
+              <option value="ingles">English</option>
+              <option value="espanol">Spanish</option>
+            </select>
+        </nav>
+    </header>
+    <!--Diseño de la sesion de incio-->
+    <section class="inicio" id="inicio">
+        <div class="inicio-contenido">
+            <h3>Hello, my name is</h3>
+            <h1>Marvin Solorzano</h1>
+            <h3>Front-end developer <span>and Cybersecurity knowledge</span></h3>
+            <p>
+              I am a person passionate about technology, with a deep interest in the field of cybersecurity and web development. 
+              Currently, I am in the process of training as a front-end developer, while I continue learning about threat identification,
+              management of security tools and administration of operating systems. I constantly strive to develop my capabilities in these areas, 
+              with a focus on the identification of vulnerabilities and the use of security solutions to contribute to the strengthening of cybersecurity in technological environments.
+            </p>
+            <div class="medio-social">
+                <a href="https://github.com/USIS051620" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/marvin-josu%C3%A9-sol%C3%B3rzano-cruz-b0042a268/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+            </div>
+            
+            <div class="dropdown">
+              <!-- Main Button -->
+              <button class="btn" onclick="toggleDropdown()">My projects</button>
+              
+              <!-- Dropdown Links -->
+              <div class="dropdown-content" id="dropdownMenu">
+                <a href="proyectosPro-ingles.html">Developer</a>
+                <a href="proyectosSegu-ingles.html">Security</a>
+              </div>
+
+              <a style="margin-left: 10px;" href="certificados-ingles.html" class="btn botonsito">My certificates</a>
+            </div>
+        </div>
+
+        <div class="inicio-img">
+            <img src="img/foto.jpeg" alt="">
+        </div>
+    </section>
+    <!--Diseño de la sesion de sobre mi-->
+    <section class="sobremi" id="sobre">
+      <div class="sobremi-img">
+        <img src="img/foto1.jpeg" alt="">
+      </div>
+      <div class="sobremi-contenido">
+        <h2 class="heading">About <span>me</span></h2>
+        <p>Throughout my career I have demonstrated my ability to take responsibilities both in academic projects and in personal actions,
+          where I have shown to be proactive and dedicated to the set objectives. Through these collaborative experiences,
+          My ability to collaborate and communicate has been enhanced, which has made it easier for me to play an essential role in achieving shared objectives.
+        </p>
+        <div class="btn-caja">
+          <a href="#" class="btnmodal">My CV <i class="bx bx-download"></i></a>
+       </div>
+      </div>
+      <!-- La ventana modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-btn">&times;</span>
+            <iframe src="/files/CV - Marvin En ingles.pdf" frameborder="0"></iframe>
+        </div>
+      </div>
+    </section>
+    <!--Diseño de la sesion de MIS SERVICIOS-->
+    <section class="servicios" id="servicios">
+      <h2 class="heading">My <span>Services</span></h2>
+      <div class="servicios-contenido">
+        <div class="servicios-caja">
+          <img src="img/html3.png" alt="">
+        </div>
+        <div class="servicios-caja">
+          <img src="img/css3.png" alt="">
+        </div>
+        <div class="servicios-caja">
+          <img src="img/java3.png" alt="">
+        </div>
+        <div class="servicios-caja">
+          <img src="img/bostrap.png" alt="">
+        </div>
+        <div class="servicios-caja">
+          <img src="img/debian.jpg" alt="">
+        </div>
+        <div class="servicios-caja">
+          <img src="img/ubuntu.jpg" alt="">
+        </div>
+        <div class="servicios-caja">
+          <img src="img/kali.png" alt="">
+        </div>
+        <div class="servicios-caja">
+          <img src="img/parrot.png" alt="">
+        </div>
+        <div class="servicios-caja">
+          <img src="img/zorin.jpeg" alt="">
+        </div>
+      </div>    
+    </section>
+    <!--Diseño de la sesion de MI testimonios-->
+    <section class="portafolio" id="portafolio">
+      <h2 class="heading">Tes<span>timonials</span></h2>
+      <div class="porta-contenido">
+        <div class="porta-caja">
+          <iframe src="https://drive.google.com/file/d/1ZvPcprInHj8WtGlsuRx7PctqoWenbdfU/preview" width="640" height="480" allow="autoplay"></iframe>
+        </div>
+        <div class="porta-caja">
+          <iframe src="https://drive.google.com/file/d/1RX8IEni3stBL4bsoxSQnKl3M7AOlGGKO/preview" width="640" height="480" allow="autoplay"></iframe>
+        </div>
+        <div class="porta-caja">
+          <iframe src="https://drive.google.com/file/d/1LDNzvBMwk5fO06sYb7Wt5cqDzF2ZnKo0/preview" width="640" height="480" allow="autoplay"></iframe>
+        </div>
+        <div class="porta-caja">
+          <iframe src="https://drive.google.com/file/d/1gyx6vOgkAVarT9jLrmr2zt45r9idoXMs/preview" width="640" height="480" allow="autoplay"></iframe>
+        </div>
+      </div>
+    </section>
+    <!--Diseño de la sesion de contacto-->
+    <section class="contacto" id="contacto">
+      <h2 class="heading">Contact<span>me</span></h2>
+      <form id="form" action="https://formspree.io/f/mqaklknb"  method="POST">
+        <div class="input-caja">
+          <input name="name" type="text" placeholder="Full name" required>
+          <input name="email" type="email" placeholder="Email" required>
+        </div>
+        <div class="input-caja">
+          <input name="number" type="number" placeholder="phone number" required>
+          <input name="name" type="text" placeholder="email subject" required>
+        </div>
+        <textarea name="message" id="mensaje"placeholder="write your message" required></textarea>
+        <input type="submit" value="Send" class="btn">
+      </form>
+      <div id="loading" class="loader-inner ball-pulse">
+        <div></div><div></div><div></div>
+      </div>
+    </section>
+    <!--Diseño de la sesion pie de pagina-->
+    <footer class="pie">
+      <div class="pie-text">
+        <p>Copyright &copy; 2024 by @Marvin Solorzano</p>
+      </div>
+      <div class="pie-icono">
+        <a href="#inicio"><i class='bx bxs-up-arrow-circle'></i></a>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/traducir.js"></script>
+    <script src="js/contacto.js"></script>
+    <script>
+        function toggleDropdown() {
+          var dropdownMenu = document.getElementById("dropdownMenu");
+          dropdownMenu.classList.toggle("show");
+        }
+      
+        // Close dropdown if clicked outside
+        window.onclick = function(event) {
+          if (!event.target.matches('.btn')) {
+            var dropdownMenu = document.getElementById("dropdownMenu");
+            if (dropdownMenu.classList.contains("show")) {
+              dropdownMenu.classList.remove("show");
+            }
+          }
+        }
+    </script>
+    <script>
+      // Obtener elementos del DOM
+      const modal = document.getElementById("myModal");
+      const openModalLink = document.querySelector(".btnmodal");
+      const closeModalBtn = document.querySelector(".close-modal-btn");
+
+      // Función para abrir la modal
+      openModalLink.onclick = function(event) {
+          event.preventDefault();
+          modal.style.display = "block";
+      }
+
+      // Función para cerrar la modal
+      closeModalBtn.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // Cerrar la modal si el usuario hace clic fuera de ella
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+    </script>
+</body>
+</html>

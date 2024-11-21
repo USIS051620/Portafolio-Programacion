@@ -1,0 +1,229 @@
+/*ESTILOS DE LA SESION DE CERTIFICADOS*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Nunito Sans", sans-serif;
+}
+:root{
+    --bg-color: #191f36;
+    --snd-bf-color: #262b40;
+    --text-colo: #fff;
+    --main-colo: #59b2f4;
+
+}
+html{
+    font-size: 62.5%;
+    overflow-x:hidden ;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-colo);
+}
+.encabezado{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-colo);
+    font-weight: 700;
+    cursor: pointer;
+}
+.logo:hover{
+    background: var(--main-colo);
+    border-radius: 15px;
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+span{
+    color: var(--main-colo);
+
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+/*ESTILOS DEL PORTAFOLIO*/
+.portafolio{
+    background: var(--snd-bf-color);
+}
+.portafolio h2{
+    margin-bottom: 4rem;
+}
+.porta-contenido{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.porta-contenido .porta-caja{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+.porta-caja iframe{
+    width: 700px;
+}
+
+/*ESTILO DEL PIE DEPAGINA*/
+.pie{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+}
+.pie-text{
+    font-size: 1.6rem;
+}
+.pie-icono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 1rem;
+    background: var(--main-colo);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.pie-icono a:hover{
+    box-shadow: 0 0 1rem var(--main-colo);
+}
+.pie-icono a i {
+    font-size: 2.4rem;
+    color: var(--snd-bf-color);
+}
+@media (max-width: 1338px){
+    .portafolio .porta-contenido{
+       width: 1100px;
+        
+    }
+    .porta-contenido iframe {
+      width: 600px;
+    }
+} 
+@media (max-width: 1220px){
+    .portafolio .porta-contenido{
+        width: 1000px;
+         
+    }
+    .porta-contenido iframe {
+       width: 600px;
+       height: 400px;
+    }
+}
+@media (max-width: 1110px){
+    .portafolio .porta-contenido{
+        width: 900px;
+         
+    }
+    .porta-contenido iframe {
+       width: 600px;
+       height: 300px;
+    }
+}
+@media (max-width: 1010px){
+    .portafolio .porta-contenido{
+        width: 800px;
+         
+    }
+    .porta-contenido iframe {
+       width: 600px;
+       height: 300px;
+    }
+}
+@media (max-width: 890px){
+    .portafolio .porta-contenido{
+        width: 700px;
+         
+    }
+    .porta-contenido iframe {
+       width: 600px;
+       height: 250px;
+    }
+}
+@media (max-width: 780px){
+    .porta-contenido{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        gap: 2.5rem;
+    }
+    .portafolio .porta-contenido{
+        width: 700px;
+         
+    }
+    .porta-contenido iframe {
+       width: 600px;
+       height: 450px;
+    }
+}
+@media (max-width: 670px){
+    .porta-contenido{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        gap: 2.5rem;
+    }
+    .portafolio .porta-contenido{
+        width: 600px;
+         
+    }
+    .porta-contenido iframe {
+       width: 500px;
+       height: 400px;
+    }
+}
+@media (max-width: 560px){
+    .porta-contenido{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        gap: 2.5rem;
+    }
+    .portafolio .porta-contenido{
+        width: 500px;
+         
+    }
+    .porta-contenido iframe {
+       width: 400px;
+       height: 300px;
+    }
+}
+@media (max-width: 455px){
+    .porta-contenido{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        gap: 2.5rem;
+    }
+    .portafolio .porta-contenido{
+        width: 500px;
+         
+    }
+    .porta-contenido iframe {
+       width: 350px;
+       height: 300px;
+    }
+}
+
+

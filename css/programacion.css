@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Nunito Sans", sans-serif;
+}
+:root{
+    --bg-color: #191f36;
+    --snd-bf-color: #262b40;
+    --text-colo: #fff;
+    --main-colo: #59b2f4;
+
+}
+html{
+    font-size: 62.5%;
+    overflow-x:hidden ;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-colo);
+}
+.encabezado{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--snd-bf-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-colo);
+    font-weight: 700;
+    cursor: pointer;
+}
+.logo:hover{
+    background: var(--main-colo);
+    border-radius: 15px;
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+h2#L{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+span {
+    color: var(--main-colo);
+}
+.irisaccess{
+    
+ text-align: center;
+    
+}
+.irisaccess p{
+    font-size: 2rem;
+    margin: 2rem 0 4rem;
+   
+}
+.irisaccess h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .5px var(--text-colo);
+}
+.capturas{
+    display: flex;
+    overflow: auto;
+    box-shadow: 
+    #252850 0px 0px 0px 3px, 
+    #00abf0 0px 0px 0px 6px, 
+    #112e42 0px 0px 0px 9px, 
+    #00abf0 0px 0px 0px 12px, 
+    #252850 0px 0px 0px 15px;
+    border-radius: 5px;
+}
+.capturas::-webkit-scrollbar{
+    width: 15px;
+}
+.capturas::-webkit-scrollbar-thumb{
+    background: var(--bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 50px;
+}
+
+.capturas .sesion-habilida span{
+    font-size: 3.2rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--main-color);
+   
+}
+.capturas .sesion-habilida{
+    flex: 1;
+    border: 1px solid transparent;
+    margin: 5px;
+    padding: 10px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    animation: animateBg 10s linear infinite;
+}
+.capturas .sesion-habilida img{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.parraf p{
+    text-align: center;
+}
+.proyecto1 p{
+    font-size: 2rem;
+    margin: 2rem 0 4rem;
+}
+/*************ESTILOS DEL ICONOOO**************************/
+/* From Uiverse.io by TanimMahbub */ 
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: monospace;
+}
+  
+.wrapper > div {
+    text-align: center;
+}
+  
+.wrapper > div + div {
+    border-inline-start: 1px solid #d6cfcf;
+    padding-inline-start: 15px;
+}
+  
+.wrapper > div > p {
+    margin-top: 15px;
+    max-width: 200px;
+}
+  
+.wrapper a {
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--snd-bf-color);
+    color: var(--main-colo);
+    position: relative;
+}
+  
+.data-tooltip::before,
+.data-tooltip::after {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.2s ease;
+}
+  
+.data-tooltip::before {
+    content: attr(data-tooltip-content);
+    width: fit-content;
+    font-size: small;
+    font-weight: 600;
+    background-color: inherit;
+    padding: 3px 10px;
+    border-radius: 4px;
+    bottom: calc(100% + 5px);
+}
+  
+.data-tooltip::after {
+    content: "";
+    border-top: 5px solid #191919;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    bottom: calc(100% + 1px);
+}
+  
+.data-tooltip:hover::before,
+.data-tooltip:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+.span-tooltip > i {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.span-tooltip > span {
+    position: absolute;
+    width: fit-content;
+    font-size: small;
+    font-weight: 600;
+    background-color: inherit;
+    padding: 3px 10px;
+    border-radius: 4px;
+    bottom: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+  
+.span-tooltip > span::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: inherit;
+    transform: rotate(45deg);
+    top: calc(100% - 6px);
+    left: 40%;
+}
+  
+.span-tooltip > i:hover + span {
+    visibility: visible;
+    opacity: 1;
+    bottom: calc(100% + 6px);
+}
+  
+
+
+/*****************************/
+/*ESTILO DEL PIE DEPAGINA*/
+.pie{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--snd-bf-color);
+}
+.pie-text{
+    font-size: 1.6rem;
+}
+.pie-icono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 1rem;
+    background: var(--main-colo);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.pie-icono a:hover{
+    box-shadow: 0 0 1rem var(--main-colo);
+}
+.pie-icono a i {
+    font-size: 2.4rem;
+    color: var(--snd-bf-color);
+}
+
+@media (max-width: 1240px){
+    .capturas .sesion-habilida{
+        width: 800px;
+    }
+    .capturas .sesion-habilida img{
+        max-width: 800px;
+    }
+}
+ 
+@media (max-width: 990px){
+    .capturas .sesion-habilida{
+        width: 700px;
+    }
+    .capturas .sesion-habilida img{
+        max-width: 700px;
+    }
+}
+@media (max-width: 865px){
+    .capturas .sesion-habilida{
+        width: 500px;
+    }
+    .capturas .sesion-habilida img{
+        max-width: 500px;
+    }
+}
+@media (max-width: 650px){
+    .capturas .sesion-habilida{
+        width: 300px;
+    }
+    .capturas .sesion-habilida img{
+        max-width: 300px;
+    }
+}
