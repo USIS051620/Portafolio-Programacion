@@ -29,6 +29,10 @@ section{
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
+#habilidades{
+    min-height: 60vh;
+    padding: 10rem 9% 2rem;
+}
 
 .encabezado{
     position: fixed;
@@ -294,6 +298,39 @@ span{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
+
+
+/*Estilos de la sesion de habilidades*/
+.habilidades h2{
+    margin-bottom: 5rem;
+}
+.habilidades-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.habilidades-container .habilidades-box{
+    flex: 1 1 30rem;
+    background: var(--snd-bf-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem var(--bg-color);
+
+}
+.habilidades-box i{
+    font-size: 7rem;
+    color: var(--main-colo);
+}
+.habilidades-box h3{
+    font-size: 2.6rem;
+}
+.habilidades-box p{
+    font-size: 1.6rem;
+}
+
 /*ESTILOS DE LA SESION DE SERVICIOS*/
 .servicios h2{
   margin-bottom: 5rem;
