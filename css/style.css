@@ -391,11 +391,24 @@ span{
 .contacto h2{
     margin-bottom: 3rem;
 }
+.contacto h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contacto p{
+    font-size: 2rem;
+    font-weight: 200;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
 .contacto form{
     max-width: 70rem;
     margin: 1rem auto;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 .contacto form .input-caja{
     display: flex;
