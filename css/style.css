@@ -46,11 +46,15 @@ section{
     align-items: center;
     z-index: 100;
 }
-.logo{
+.logo{ 
     font-size: 2.5rem;
     color: var(--text-colo);
     font-weight: 700;
     cursor: default;
+}
+.logo img{
+    width: 70px;
+    height: auto;
 }
 .navbar a{
  font-size: 1.5rem;
@@ -391,7 +395,7 @@ span{
 .contacto h2{
     margin-bottom: 3rem;
 }
-/*.contact-descrip h3{
+.contact-descrip h3{
     font-size: 3.2rem;
     font-weight: 700;
     text-align: center;
@@ -402,7 +406,7 @@ span{
     font-weight: 200;
     text-align: center;
     margin-bottom: 3rem;
-}*/
+}
 .contacto form{
     max-width: 70rem;
     margin: 1rem auto;
@@ -442,6 +446,11 @@ span{
     flex-wrap: wrap;
     padding: 2rem 9%;
     background: var(--snd-bf-color);
+}
+.logo2 img{
+    width: 70px;
+    height: auto;
+    border-radius: 20px;
 }
 .pie-text{
     font-size: 1.6rem;

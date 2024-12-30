@@ -93,6 +93,11 @@ span{
     padding: 2rem 9%;
     background: var(--bg-color);
 }
+.logo2 img{
+    width: 70px;
+    height: auto;
+    border-radius: 20px;
+}
 .pie-text{
     font-size: 1.6rem;
 }
