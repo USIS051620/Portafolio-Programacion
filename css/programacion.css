@@ -135,7 +135,7 @@ span {
 }
   
 .wrapper > div + div {
-    border-inline-start: 1px solid #d6cfcf;
+    /* border-inline-start: 1px solid #d6cfcf; */
     padding-inline-start: 15px;
 }
   
