@@ -85,6 +85,9 @@ section{
     justify-content: center;
     align-items: center;
 }
+.inicio-contenido {
+    padding-right: 5rem;
+}
 .inicio-contenido h3{
     font-size: 3.2rem;
     font-weight: 700;
@@ -282,7 +285,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
     background: var(--snd-bf-color)
 }
 .sobremi-img img{
@@ -559,6 +562,7 @@ span{
     }
     .inicio-contenido{
         order: 2;
+        padding-right: 0;
     }
     .inicio-img img{
       width: 70vw;
@@ -674,7 +678,7 @@ span{
     margin-top: 8rem;
  }
  .sobremi-img img{
-    width: 100vw;
+    width: 70vw;
     margin-top: 4rem;
  }
  .porta-caja iframe{
