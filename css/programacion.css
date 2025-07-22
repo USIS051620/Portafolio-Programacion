@@ -90,8 +90,8 @@ span {
     width: 15px;
 }
 .capturas::-webkit-scrollbar-thumb{
-    background: var(--bg-color);
-    border: 1px solid var(--main-color);
+    background: var(--bg-colo);
+    border: 1px solid var(--main-colo);
     border-radius: 50px;
 }
 
