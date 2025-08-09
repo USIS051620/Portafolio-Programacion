@@ -311,31 +311,111 @@ span{
 .habilidades h2{
     margin-bottom: 5rem;
 }
-.habilidades-container{
+#habilidades {
+    padding-bottom: 10rem;
+}
+
+.habilidades .sub-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
+/* Contenedor principal para las tarjetas */
+.skills-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+/* Estilo general para todas las tarjetas */
+.skill-card {
+    background: var(--snd-bf-color);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--main-colo);
+    box-shadow: 0 0 15px var(--main-colo);
+}
+
+/* Estilo específico para tarjetas de Habilidades Duras */
+.hard-skill {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.hard-skill i {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hard-skill p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-colo);
+}
+
+/* Colores de los iconos (basado en tu imagen) */
+.hard-skill .html5-icon     { color: #51A1DE; } /* Rosado en tu imagen */
+.hard-skill .css3-icon      { color: #51A1DE; }
+.hard-skill .js-icon        { color: #51A1DE; }
+.hard-skill .react-icon     { color: #51A1DE; }
+.hard-skill .vuejs-icon     { color: #51A1DE; }
+.hard-skill .github-icon    { color: #51A1DE; }
+.hard-skill .bootstrap-icon { color: #51A1DE; } /* Gris/blanco en tu imagen */
+
+
+/* Grid para habilidades blandas y valores */
+.soft-skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Estilo para tarjetas de Habilidades Blandas y Valores */
+.soft-skill {
+    display: flex;
+    align-items: center;
     gap: 2rem;
 }
-.habilidades-container .habilidades-box{
-    flex: 1 1 30rem;
-    background: var(--snd-bf-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
-    text-align: center;
-    border: .2rem var(--bg-color);
 
+.soft-skill .skill-icon-container {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.habilidades-box i{
-    font-size: 7rem;
-    color: var(--main-colo);
+
+.soft-skill .skill-icon-container i {
+    font-size: 3rem;
+    color: var(--text-colo);
 }
-.habilidades-box h3{
-    font-size: 2.6rem;
+
+.soft-skill .skill-text-container h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-colo);
+    margin-bottom: 0.5rem;
 }
-.habilidades-box p{
-    font-size: 1.6rem;
+
+.soft-skill .skill-text-container p {
+    font-size: 1.4rem;
+    color: #c0c0c0; /* Un gris más claro para el texto de descripción */
+    line-height: 1.5;
+    margin: 0;
 }
 
 /*ESTILOS DE LA SESION DE SERVICIOS*/
