@@ -191,11 +191,13 @@ span{
     cursor: pointer;
 }
 .btn-caja{
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
     padding: 0.1rem 1.0rem ;
-    background: var(--main-colo);
+    /* background: var(--main-colo); */
     border-radius: 1rem;
-    box-shadow: 0 0 1rem var(--main-colo);
+    /* box-shadow: 0 0 1rem var(--main-colo); */
     font-size: 2.6rem;
     color: var(--bg-color);
     letter-spacing: .1rem;
@@ -304,6 +306,113 @@ span{
 .sobremi-contenido p{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+}
+
+.sobremi-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 5rem;
+    align-items: start; /* Alinea los items al inicio */
+}
+
+/* Columna de la izquierda (info + foto) */
+.sobremi-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra la foto */
+}
+
+.sobremi-info .sobremi-img {
+    margin-bottom: 3rem;
+}
+
+.sobremi-info .sobremi-contenido h2 {
+    text-align: center; /* Centramos el "Sobre Mí" */
+}
+
+/* Columna de la derecha (experiencia) */
+.sobremi-experiencia {
+    width: 100%;
+}
+
+.experience-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    padding-left: 2rem; /* Espacio para la línea y los puntos */
+}
+
+/* La línea vertical de la timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px; /* Centra la línea con los puntos */
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--main-colo);
+    opacity: 0.3;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 3rem; /* Espacio entre el punto y el contenido */
+}
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background: var(--main-colo);
+    border: 3px solid var(--snd-bf-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-content {
+    background: var(--snd-bf-color); /* Fondo de la tarjeta de experiencia */
+    padding: 2rem;
+    border-radius: 1rem;
+    border-left: 3px solid var(--main-colo);
+}
+
+.timeline-date {
+    font-size: 1.4rem;
+    color: var(--main-colo);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-job-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-colo);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-company {
+    font-size: 1.5rem;
+    color: #b0b0b0;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.timeline-description {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #c0c0c0;
 }
 
 
@@ -666,7 +775,7 @@ span{
         padding: 2rem 3%;
     }
     section{
-      padding: 10rem 3%;
+        padding: 10rem 3%;
     }
     .modal-content {
         margin-top: 60px;
@@ -677,17 +786,29 @@ span{
         margin-right: -10px;
         
     }
+    .sobremi-container {
+        grid-template-columns: 1fr; /* Una sola columna en tabletas y móviles */
+    }
+    .sobremi-info {
+        flex-direction: column; /* Apila foto y texto */
+    }
+    .sobremi-info .sobremi-img {
+        width: 50vw; /* Ajusta el tamaño de la imagen */
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: center;
+    }
     .modal-content iframe {
         width: 600px;
     }
     .servicios{
         padding: 7rem;
     }
-   .portafolio{
-     padding-bottom: 7rem;
-   }
-   .contacto{
-     min-width: auto;
+    .portafolio{
+        padding-bottom: 7rem;
+    }
+    .contacto{
+        min-width: auto;
     }
     .pie{
         padding: 2rem 3%;
@@ -930,8 +1051,8 @@ span{
 }
 
 @media (max-width: 482px){
-   .dropdown{
-     display: grid;
+    .dropdown{
+        display: grid;
     }
     .dropdown .botonsito{
         margin-top: 20px;
@@ -944,12 +1065,12 @@ span{
 
 }
 @media (max-width: 450px){
-  html{
-    font-size: 50%;
-  }
-  .contacto form .input-caja input{
-    width: 100%;
-  }
+    html{
+        font-size: 50%;
+    }
+    .contacto form .input-caja input{
+        width: 100%;
+    }
 }
 
 /* Estilos para el estado de carga */
@@ -961,4 +1082,3 @@ span{
     transform: translate(-50%, -50%);
     z-index: 1000;
 }
-
