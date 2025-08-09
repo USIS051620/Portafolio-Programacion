@@ -776,6 +776,19 @@ span{
         width: 700px;
         height: 450px;
     }
+    .testimonial-slider .swiper-button-next,
+    .testimonial-slider .swiper-button-prev {
+        display: none;
+    }
+    .testimonial-slide-content {
+        padding: 0 15px; 
+    }
+    .testimonial-slider {
+        padding-bottom: 5rem;
+    }
+    .testimonial-text {
+        font-size: 1.5rem;
+    }
 }
 @media (max-width: 695px){
     .modal{
