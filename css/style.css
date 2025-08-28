@@ -441,7 +441,7 @@ span{
 
 /* Estilo general para todas las tarjetas */
 .skill-card {
-    background: var(--snd-bf-color);
+    background: linear-gradient(45deg, black, transparent); /* var(--snd-bf-color); esto estaba antes */
     border-radius: 1.5rem;
     padding: 2rem;
     border: 2px solid transparent;
