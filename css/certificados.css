@@ -60,17 +60,27 @@ span{
     text-align: center;
     font-size: 4.5rem;
 }
-/*ESTILOS DEL PORTAFOLIO*/
+
+/* ========================================================= */
+/* ESTILOS DEL PORTAFOLIO (MODIFICADOS Y OPTIMIZADOS) */
+/* ========================================================= */
+
 .portafolio{
     background: var(--snd-bf-color);
 }
 .portafolio h2{
     margin-bottom: 4rem;
 }
+.categoria-titulo {
+    text-align: center;
+    font-size: 3.6rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
 .porta-contenido{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+    /* Crea columnas fluidas que se adaptan automáticamente al tamaño de la pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2.5rem;
 }
 .porta-contenido .porta-caja{
@@ -78,10 +88,14 @@ span{
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
-    display: flex;
+    /* Mantiene la proporción 4:3 (como un 640x480) automáticamente */
+    aspect-ratio: 4 / 3; 
 }
 .porta-caja iframe{
-    width: 700px;
+    /* El iframe llena completamente su contenedor padre 'porta-caja' */
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /*ESTILO DEL PIE DEPAGINA*/
@@ -117,118 +131,3 @@ span{
     font-size: 2.4rem;
     color: var(--snd-bf-color);
 }
-@media (max-width: 1338px){
-    .portafolio .porta-contenido{
-       width: 1100px;
-        
-    }
-    .porta-contenido iframe {
-      width: 600px;
-    }
-} 
-@media (max-width: 1220px){
-    .portafolio .porta-contenido{
-        width: 1000px;
-         
-    }
-    .porta-contenido iframe {
-       width: 600px;
-       height: 400px;
-    }
-}
-@media (max-width: 1110px){
-    .portafolio .porta-contenido{
-        width: 900px;
-         
-    }
-    .porta-contenido iframe {
-       width: 600px;
-       height: 300px;
-    }
-}
-@media (max-width: 1010px){
-    .portafolio .porta-contenido{
-        width: 800px;
-         
-    }
-    .porta-contenido iframe {
-       width: 600px;
-       height: 300px;
-    }
-}
-@media (max-width: 890px){
-    .portafolio .porta-contenido{
-        width: 700px;
-         
-    }
-    .porta-contenido iframe {
-       width: 600px;
-       height: 250px;
-    }
-}
-@media (max-width: 780px){
-    .porta-contenido{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        align-items: center;
-        gap: 2.5rem;
-    }
-    .portafolio .porta-contenido{
-        width: 700px;
-         
-    }
-    .porta-contenido iframe {
-       width: 600px;
-       height: 450px;
-    }
-}
-@media (max-width: 670px){
-    .porta-contenido{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        align-items: center;
-        gap: 2.5rem;
-    }
-    .portafolio .porta-contenido{
-        width: 600px;
-         
-    }
-    .porta-contenido iframe {
-       width: 500px;
-       height: 400px;
-    }
-}
-@media (max-width: 560px){
-    .porta-contenido{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        align-items: center;
-        gap: 2.5rem;
-    }
-    .portafolio .porta-contenido{
-        width: 500px;
-         
-    }
-    .porta-contenido iframe {
-       width: 400px;
-       height: 300px;
-    }
-}
-@media (max-width: 455px){
-    .porta-contenido{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        align-items: center;
-        gap: 2.5rem;
-    }
-    .portafolio .porta-contenido{
-        width: 500px;
-         
-    }
-    .porta-contenido iframe {
-       width: 350px;
-       height: 300px;
-    }
-}
-
-
