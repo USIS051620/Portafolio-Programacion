@@ -16,7 +16,6 @@
     --snd-bf-color: #262b40;
     --text-colo: #fff;
     --main-colo: #59b2f4;
-
 }
 html{
     font-size: 62.5%;
@@ -43,6 +42,7 @@ body{
     color: var(--text-colo);
     font-weight: 700;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 .logo:hover{
     background: var(--main-colo);
@@ -54,7 +54,6 @@ section{
 }
 span{
     color: var(--main-colo);
-
 }
 .heading{
     text-align: center;
@@ -62,7 +61,7 @@ span{
 }
 
 /* ========================================================= */
-/* ESTILOS DEL PORTAFOLIO (MODIFICADOS Y OPTIMIZADOS) */
+/* ESTILOS DEL PORTAFOLIO CON EFECTO GLOW Y TÍTULOS */
 /* ========================================================= */
 
 .portafolio{
@@ -79,26 +78,139 @@ span{
 }
 .porta-contenido{
     display: grid;
-    /* Crea columnas fluidas que se adaptan automáticamente al tamaño de la pantalla */
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2.5rem;
 }
+
+/* ========================================================= */
+/* CAJA DE CERTIFICADO CON IMAGEN Y TEXTO */
+/* ========================================================= */
+
 .porta-contenido .porta-caja{
     position: relative;
     border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
-    /* Mantiene la proporción 4:3 (como un 640x480) automáticamente */
-    aspect-ratio: 4 / 3; 
+    /* Borde inicial oscuro y semi-transparente */
+    border: 2px solid rgba(89, 178, 244, 0.1);
+    background: rgba(25, 31, 54, 0.8);
+    /* Transición suave para todos los efectos */
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    /* ALTURA FIJA PARA TODAS LAS CAJAS */
+    height: 400px;
 }
-.porta-caja iframe{
-    /* El iframe llena completamente su contenedor padre 'porta-caja' */
+
+/* Efecto hover: borde brillante con glow */
+.porta-caja:hover{
+    /* Borde azul brillante */
+    border: 2px solid var(--main-colo);
+    /* Sombra exterior brillante (glow effect) */
+    box-shadow: 0 0 20px rgba(89, 178, 244, 0.6),
+                0 0 40px rgba(89, 178, 244, 0.4),
+                0 0 60px rgba(89, 178, 244, 0.2);
+    /* Elevación sutil */
+    transform: translateY(-5px);
+}
+
+/* Efecto de brillo interior en hover */
+.porta-caja::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+                transparent, 
+                rgba(89, 178, 244, 0.1), 
+                transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.porta-caja:hover::before{
+    opacity: 1;
+}
+
+/* ========================================================= */
+/* CONTENEDOR DE LA IMAGEN DEL CERTIFICADO */
+/* ========================================================= */
+
+.cert-imagen{
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0; /* Evita que la imagen se comprima */
+}
+
+.cert-imagen iframe{
     width: 100%;
     height: 100%;
     border: 0;
 }
 
-/*ESTILO DEL PIE DEPAGINA*/
+/* ========================================================= */
+/* INFORMACIÓN DEL CERTIFICADO (TÍTULO Y DESCRIPCIÓN) */
+/* ========================================================= */
+
+.cert-info{
+    padding: 2rem;
+    background: rgba(25, 31, 54, 0.9);
+    text-align: center;
+    /* Ocupa el espacio restante y mantiene altura fija */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Altura fija del área de texto */
+    min-height: 120px;
+    max-height: 120px;
+    overflow: hidden;
+}
+
+.cert-titulo{
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--main-colo);
+    margin-bottom: 0.8rem;
+    transition: color 0.3s ease;
+    /* Control de texto largo */
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Máximo 2 líneas */
+    -webkit-box-orient: vertical;
+}
+
+.porta-caja:hover .cert-titulo{
+    color: #7bc8ff;
+}
+
+.cert-descripcion{
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    transition: color 0.3s ease;
+    /* Control de texto largo */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Máximo 2 líneas */
+    -webkit-box-orient: vertical;
+}
+
+.porta-caja:hover .cert-descripcion{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/*ESTILO DEL PIE DE PAGINA*/
 .pie{
     display: flex;
     justify-content: space-between;
@@ -130,4 +242,46 @@ span{
 .pie-icono a i {
     font-size: 2.4rem;
     color: var(--snd-bf-color);
+}
+
+/* ========================================================= */
+/* RESPONSIVE DESIGN */
+/* ========================================================= */
+
+@media (max-width: 768px){
+    .porta-contenido{
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+    
+    /* Mantiene altura fija en móviles también */
+    .porta-caja{
+        height: 380px;
+    }
+    
+    .cert-imagen{
+        height: 240px;
+    }
+    
+    .cert-info{
+        padding: 1.5rem;
+        min-height: 140px;
+        max-height: 140px;
+    }
+    
+    .cert-titulo{
+        font-size: 1.8rem;
+    }
+    
+    .cert-descripcion{
+        font-size: 1.3rem;
+    }
+    
+    .categoria-titulo{
+        font-size: 2.8rem;
+    }
+    
+    .heading{
+        font-size: 3.5rem;
+    }
 }
