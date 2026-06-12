@@ -301,3 +301,33 @@ span {
         max-width: 300px;
     }
 }
+
+/* === BOTÓN REGRESAR === */
+.btn-regresar{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-colo);
+    background: var(--snd-bf-color);
+    border: 1px solid rgba(89, 178, 244, 0.3);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-regresar i{
+    font-size: 2rem;
+    color: var(--main-colo);
+    transition: transform 0.3s ease;
+}
+.btn-regresar:hover{
+    background: var(--main-colo);
+    border-color: var(--main-colo);
+    color: var(--bg-color);
+}
+.btn-regresar:hover i{
+    color: var(--bg-color);
+    transform: translateX(-4px);
+}

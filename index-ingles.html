@@ -22,17 +22,16 @@
         </a>
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="#sobre">About Me</a>
-            <a href="#habilidades">My Skills</a>
-            <a href="#portafolio">Reviews</a>
-            <a href="#testimonios">Testimonials</a>
-            <a href="#contacto">Contact</a>
-            <select id="miSelect" onchange="redireccionar()" class="rectangle-3">
-              <option value="all">Translater</option>
-              <option value="ingles">English</option>
-              <option value="espanol">Spanish</option>
-            </select>
+            <a href="#" class="active"><i class='bx bx-home-alt'></i>Home</a>
+            <a href="#sobre"><i class='bx bx-user'></i>About Me</a>
+            <a href="#habilidades"><i class='bx bx-code-alt'></i>My Skills</a>
+            <a href="#portafolio"><i class='bx bx-star'></i>Reviews</a>
+            <a href="#testimonios"><i class='bx bx-message-rounded-dots'></i>Testimonials</a>
+            <a href="#contacto"><i class='bx bx-envelope'></i>Contact</a>
+            <div class="lang-switch">
+              <a href="/index.html" class="lang-opt">ES</a>
+              <a href="/index-ingles.html" class="lang-opt active">EN</a>
+            </div>
         </nav>
     </header>
     <!--Diseño de la sesion de incio-->
@@ -56,15 +55,19 @@
             
             <div class="dropdown">
               <!-- Main Button -->
-              <button class="btn" onclick="toggleDropdown()">My projects</button>
-              
+              <button class="btn-proyectos" onclick="toggleDropdown()">
+                <i class='bx bx-folder'></i>
+                My projects
+                <i class='bx bx-chevron-down chevron'></i>
+              </button>
+
               <!-- Dropdown Links -->
               <div class="dropdown-content" id="dropdownMenu">
-                <a href="proyectosPro-ingles.html">Developer</a>
-                <a href="proyectosSegu-ingles.html">Security</a>
+                <a href="proyectosPro-ingles.html"><i class='bx bx-code-alt'></i> Developer</a>
+                <a href="proyectosSegu-ingles.html"><i class='bx bx-shield-quarter'></i> Security</a>
               </div>
 
-              <a style="margin-left: 10px;" href="certificados-ingles.html" class="btn botonsito">My certificates</a>
+              <a href="certificados-ingles.html" class="btn-proyectos btn-cert"><i class='bx bx-award'></i> My certificates</a>
             </div>
         </div>
 
@@ -85,7 +88,7 @@
                 <h2 class="heading">About <span>Me</span></h2>
                 <p>Throughout my career, I have demonstrated my ability to take on responsibility in both academic projects and personal endeavors, where I have proven to be proactive and dedicated to achieving established goals. Through these collaborative experiences, my ability to collaborate and communicate has been enhanced, allowing me to play a key role in achieving shared goals.</p>
                 <div class="btn-caja">
-                    <a href="/files/En ingles.pdf" target="_blank" class="btn botonsito">Download My CV</a>
+                    <a href="/files/En ingles.pdf" target="_blank" class="btn botonsito"><i class='bx bx-download'></i> Download My CV</a>
                 </div>
             </div>
         </div>
@@ -457,7 +460,7 @@
           <input name="name" type="text" placeholder="email subject" required>
         </div>
         <textarea name="message" id="mensaje"placeholder="write your message" required></textarea>
-        <input type="submit" value="Send" class="btn">
+        <button type="submit" class="btn"><i class='bx bx-paper-plane'></i> Send</button>
       </form>
       <div id="loading" class="loader-inner ball-pulse">
         <div></div><div></div><div></div>
@@ -469,7 +472,7 @@
         <img src="./img/logo.png" alt="">
       </div>
       <div class="pie-text">
-        <p>Copyright &copy; 2024 by @Marvin Solorzano. All rights reserved.</p>
+        <p>Copyright &copy; 2026 by @Marvin Solorzano. All rights reserved.</p>
       </div>
       <div class="pie-icono">
         <a href="#inicio"><i class='bx bxs-up-arrow-circle'></i></a>
@@ -477,21 +480,21 @@
     </footer>
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="js/traducir.js"></script>
     <script src="js/contacto.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         function toggleDropdown() {
-          var dropdownMenu = document.getElementById("dropdownMenu");
-          dropdownMenu.classList.toggle("show");
+          document.getElementById("dropdownMenu").classList.toggle("show");
+          document.querySelector(".dropdown").classList.toggle("open");
         }
       
-        // Close dropdown if clicked outside
+        // Cerrar el menú si se hace clic fuera
         window.onclick = function(event) {
-          if (!event.target.matches('.btn')) {
+          if (!event.target.closest('.btn-proyectos')) {
             var dropdownMenu = document.getElementById("dropdownMenu");
             if (dropdownMenu.classList.contains("show")) {
               dropdownMenu.classList.remove("show");
+              document.querySelector(".dropdown").classList.remove("open");
             }
           }
         }
